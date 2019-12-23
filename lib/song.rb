@@ -10,20 +10,6 @@ class Song
     self.class.all << self
   end
 
-end
-
-class Song
-  attr_accessor :name, :artist_name
-  @@all = []
-
-  def self.all
-    @@all
-  end
-
-  def save
-    self.class.all << self
-  end
-
   def self.create
     song = Song.new
     song.save
@@ -70,7 +56,7 @@ class Song
     artist_name = parts[0]
     song_name = parts[1].gsub(".mp3", "")
 
-    song = self.createhttps://learn.co/tracks/online-software-engineering-structured/object-oriented-ruby/object-models/advanced-class-methods-lab#
+    song = self.create
     song.name = song_name
     song.artist_name = artist_name
     song
